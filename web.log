@@ -1,0 +1,22 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/app.py", line 318, in <module>
+    web.run_app(app, host='0.0.0.0', port=8080)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/aiohttp/web.py", line 502, in run_app
+    loop.run_until_complete(main_task)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/aiohttp/web.py", line 404, in _run_app
+    await site.start()
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/aiohttp/web_runner.py", line 138, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/base_events.py", line 1641, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): [errno 98] address already in use
